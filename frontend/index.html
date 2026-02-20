@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Management</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2><ul>Product Management System</ul></h2>
+
+  <div class="form">
+    <input type="hidden" id="productId">
+    <input type="text" id="name" placeholder="Product Name">
+    <input type="number" id="price" placeholder="Price">
+    <input type="text" id="description" placeholder="Description">
+    <button onclick="saveProduct()">Save Product</button>
+    <p id="error"></p>
+  </div>
+
+  <input type="text" id="search" placeholder="Search Product..." onkeyup="searchProducts()">
+  <p id="noRecord" style="display:none; color:red; margin-bottom:10px;">
+  Record not found
+</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="productTable"></tbody>
+  </table>
+  
+
+
+  <div class="pagination">
+    <button onclick="prevPage()">Prev</button>
+    <span id="pageInfo"></span>
+    <button onclick="nextPage()">Next</button>
+  </div>
+  
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
