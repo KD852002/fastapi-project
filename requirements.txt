@@ -3,6 +3,3 @@ uvicorn
 sqlalchemy
 pydantic
 python-dotenv
-
-#run this project
-uvicorn app.main:app
